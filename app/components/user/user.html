@@ -1,0 +1,17 @@
+<div id="user-container">
+  <div id="user-pic"
+      ng-if="$ctrl.authData.photoURL"
+      ng-style="{'background-image': 'url({{$ctrl.authData.photoURL}})'}">
+  </div>
+  <div id="user-name">{{$ctrl.authData.displayName}}</div>
+  <button id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+      ng-show="$ctrl.authData"
+      ng-click="$ctrl.auth.$signOut()">
+    Sign-out
+  </button>
+  <button  id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text--white"
+      ng-hide="$ctrl.authData"
+      ng-click="$ctrl.auth.$signInWithPopup('google')">
+  <i class="material-icons">account_circle</i>Sign-in with Google
+  </button>
+</div>

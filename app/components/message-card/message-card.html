@@ -1,0 +1,33 @@
+<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+  <message-list id="messages" messages="$ctrl.list"></message-list>
+  <form name="dice-form" ng-submit="$ctrl.submit()">
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="die-quantity"
+          ng-model="$ctrl.dieQuantity"
+          required />
+      <label class="mdl-textfield__label" for="die-quantity">Number of dice...</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <select class="mdl-textfield__input" type="text" id="die-denomination"
+          ng-model="$ctrl.dieDenomination" required >
+        <option value="4">d4</option>
+        <option value="6">d6</option>
+        <option value="8">d8</option>
+        <option value="10">d10</option>
+        <option value="12">d12</option>
+        <option value="20">d20</option>
+      </select>
+      <label class="mdl-textfield__label" for="die-denomination">Denomination</label>
+    </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="bonus"
+          ng-model="$ctrl.bonus">
+      <label class="mdl-textfield__label" for="bonus">Bonus...</label>
+    </div>
+    <button id="dice-submit" type="submit"
+      class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+      ng-disabled="dice-form.$invalid">
+      Submit
+    </button>
+  </form>
+</div>

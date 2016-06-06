@@ -1,0 +1,13 @@
+<main class="mdl-layout__content mdl-color--grey-100">
+  <div id="messages-card-container" class="mdl-cell mdl-cell--12-col mdl-grid">
+    <!-- Messages container -->
+    <message-card  id="messages-card" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--6-col-tablet mdl-cell--6-col-desktop"
+     ng-if="$ctrl.authData"
+     user="$ctrl.authData"></message-card>
+
+    <div id="must-signin-snackbar" class="mdl-js-snackbar mdl-snackbar">
+      <div class="mdl-snackbar__text"></div>
+      <button class="mdl-snackbar__action" type="button"></button>
+    </div>
+  </div>
+</main>
