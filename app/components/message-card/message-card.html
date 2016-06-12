@@ -24,6 +24,11 @@
           ng-model="$ctrl.bonus">
       <label class="mdl-textfield__label" for="bonus">Bonus...</label>
     </div>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+      <input class="mdl-textfield__input" type="text" id="comment"
+          ng-model="$ctrl.comment">
+      <label class="mdl-textfield__label" for="comment">Comment:</label>
+    </div>
     <button id="dice-submit" type="submit"
       class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
       ng-disabled="dice-form.$invalid">

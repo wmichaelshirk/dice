@@ -6,7 +6,7 @@ let messageCardComponent = {
   controller: function MessageCard($firebaseArray) {
     var ctrl = this
 
-    let ref = firebase.database().ref().child("messages").limitToLast(5)
+    let ref = firebase.database().ref().child("messages").limitToLast(7)
     ctrl.list = $firebaseArray(ref)
 
     ctrl.submit = function submit() {
@@ -14,7 +14,8 @@ let messageCardComponent = {
        name: ctrl.user.displayName,
        text: xDy(ctrl.dieQuantity, ctrl.dieDenomination, ctrl.bonus),
        timestamp: (new Date()).toString(),
-       photoUrl: ctrl.user.photoURL || '/images/profile_placeholder.png'
+       photoUrl: ctrl.user.photoURL || '/images/profile_placeholder.png',
+       comment: ctrl.comment
      }).then(function() {
        ctrl.dieQuantity = null;
        ctrl.dieDenomination= null;

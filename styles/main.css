@@ -59,6 +59,9 @@ main, #messages-card {
   flex-direction: column;
   display: flex;
 }
+#comment {
+  display: block;
+}
 #message-filler {
   flex-grow: 1;
 }
